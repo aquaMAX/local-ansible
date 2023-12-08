@@ -3,8 +3,6 @@
   gather_facts: true
   connection: local
   tasks:
-  - name: uptime
-    command: uptime
-    register: uptime
-  - name: ipaddress
-    command: ip a
+  - name: facts
+    debug:
+      msg: node facts {{ ansible_facts }}
