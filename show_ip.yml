@@ -4,7 +4,7 @@
   connection: local
   tasks:
   - name: uptime
-  command: uptime
-  register: uptime
+    command: uptime
+    register: uptime
   - name: ipaddress
-  command: ip a
+    command: ip a
