@@ -3,5 +3,8 @@
   gather_facts: true
   connection: local
   tasks:
-    - debug: var=ansible_all_ipv4_addresses
-    - debug: var=ansible_default_ipv4.address
+  - name: uptime
+  command: uptime
+  register: uptime
+  - name: ipaddress
+  command: ip a
